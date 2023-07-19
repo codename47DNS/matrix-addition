@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgb(218, 218, 218);
+    font-family: sans-serif;
+}
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #5b4af1;
+}
+
+span {
+    font-weight: bold;
+}
+
+.app_name {
+    text-align: center;
+    font-family: monospace;
+    font-size: 50px;
+    position: relative;
+    padding: 10px 20px;
+    letter-spacing: 5px;
+    font-weight: bolder;
+}
+
+.con {
+    width: 100%;
+    padding: 10px 30px;
+}
+
+.rows,.columns {
+    width: 300px;
+    height: 10px;
+    -webkit-appearance: none;
+    background-color: rgb(245, 248, 253);
+    border-radius: 10px;
+}
+
+.rows::-webkit-slider-thumb,.columns::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: rgb(255, 255, 255);
+    width: 7px;
+    height: 20px;
+    cursor: pointer;
+    transition: 0.1s;
+    border-radius: 10px;
+    box-shadow: 0.5px 0.5px 2px #ccc;
+}
+
+.con > span {
+    display: block;
+    margin: 10px 0;
+}
+
+.matrix-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.matrix {
+    border-collapse: collapse;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.matrix td {
+    width: 75px;
+    padding: 10px;
+}
+
+.matrix td > input {
+    width: 100%;
+    border: none;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: inherit;
+    color: white;
+    font-weight: bold;
+}
+
+.matrix td > input:focus {
+    outline: 1px solid dodgerblue;
+    border: 1px solid transparent;
+}
+
+.matrix td:first-child {
+    border-left: 1px solid rgb(255, 255, 255);
+}
+
+.matrix td:last-child {
+    border-right: 1px solid rgb(255, 255, 255);
+}
+
+.edges {
+    width: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    position: absolute;
+}
+
+.top_left {
+    top: 0;
+    left: 0;
+}
+
+.top_right {
+    top: 0;
+    right: 0;
+}
+
+.bottom_left {
+    bottom: 0;
+    left: 0;
+}
+
+.bottom_right {
+    bottom: 0;
+    right: 0;
+}
+
+.addition_op {
+    position: relative;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+.equal_op {
+    position: relative;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 20px; 
+}
+
+input[name=no_of_matrix] {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    margin-top: 10px;
+    border: 2px solid rgb(248, 248, 248);
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0px 0px 3px  rgb(24, 24, 24);
+    cursor: pointer;
+}
+
+input[name=no_of_matrix]:checked {
+    box-shadow: inset 0px 0px 1px 3px  rgb(6, 116, 226);
+    cursor: auto;
+}
+
+.inputs {
+    -webkit-appearance: none;
+}
+
+.inputs::-webkit-inner-spin-button,
+.inputs::-webkit-outer-spin-button {
+    display: none;
+}
+
+.matrix td > .outputs {
+    width: 100%;
+    border: none;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: inherit;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 13.3333px;
+}
